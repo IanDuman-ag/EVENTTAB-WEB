@@ -463,6 +463,13 @@ body.games-page {
         linear-gradient(180deg, #0a2b4d 0, #0a2b4d 16rem, #edf2f8 16rem, #f8fbff 100%);
 }
 
+body.admin-portal-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(95, 148, 217, 0.24), transparent 22%),
+        linear-gradient(120deg, #1a4965 0%, #0c3c73 42%, #082d5d 100%);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -1102,6 +1109,145 @@ img {
 .games-shell {
     max-width: 980px;
     margin: 0 auto;
+}
+
+.admin-portal-shell {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.admin-portal-card {
+    width: min(100%, 24rem);
+    padding: 1.7rem 1rem 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 22px 44px rgba(5, 22, 41, 0.22);
+    text-align: center;
+}
+
+.admin-portal-logo {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto 0.9rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 24px rgba(13, 41, 73, 0.14);
+}
+
+.admin-portal-card h1 {
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    font-size: 1.65rem;
+    color: var(--navy-950);
+}
+
+.admin-portal-card p {
+    margin: 0.25rem 0 1rem;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+}
+
+.admin-login-form {
+    display: grid;
+    gap: 0.7rem;
+    text-align: left;
+}
+
+.admin-input-wrap {
+    position: relative;
+    display: block;
+}
+
+.admin-input-wrap input {
+    width: 100%;
+    height: 42px;
+    padding: 0 2.5rem 0 2.35rem;
+    border: 1px solid rgba(16, 54, 93, 0.12);
+    border-radius: 8px;
+    background: #f8fbff;
+    color: var(--navy-950);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.admin-input-wrap input:focus {
+    border-color: rgba(16, 54, 93, 0.34);
+    box-shadow: 0 0 0 3px rgba(16, 54, 93, 0.08);
+}
+
+.admin-input-wrap input::placeholder {
+    color: #8798ad;
+}
+
+.admin-input-icon {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    color: #9aa8b9;
+    transform: translateY(-50%);
+}
+
+.admin-input-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.admin-input-icon.trailing {
+    left: auto;
+    right: 0.8rem;
+}
+
+.admin-remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--navy-950);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.admin-remember input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+.admin-signin-btn {
+    height: 42px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--navy-950), var(--navy-900));
+    color: var(--white);
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+.admin-signin-btn:hover {
+    filter: brightness(1.05);
+}
+
+.admin-back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    width: calc(100% + 2rem);
+    margin: 1rem -1rem 0;
+    padding: 1rem;
+    border-top: 1px solid rgba(16, 54, 93, 0.1);
+    color: #6e7d8d;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.admin-back-link:hover {
+    color: var(--navy-950);
 }
 
 .games-heading {
@@ -2263,6 +2409,10 @@ body.game-detail-page {
 
     .games-grid {
         grid-template-columns: 1fr;
+    }
+
+    .admin-portal-card {
+        width: min(100%, 22rem);
     }
 
     .event-hero-card {

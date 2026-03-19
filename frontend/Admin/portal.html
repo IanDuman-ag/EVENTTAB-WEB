@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USTP Admin Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="admin-portal-page">
+    <main class="admin-portal-shell">
+        <section class="admin-portal-card">
+            <img src="../assets/USG Logo.jpg" alt="Admin portal logo" class="admin-portal-logo">
+            <h1>Admin Portal</h1>
+            <p>Authorized personnel only</p>
+
+            <form class="admin-login-form">
+                <label class="admin-input-wrap" for="portal-email">
+                    <span class="admin-input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm1 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9.24l5.39 3.59a1 1 0 0 0 1.22 0L18 9.24Zm0-10.16-6 4-6-4V7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <input id="portal-email" type="email" placeholder="Email">
+                </label>
+
+                <label class="admin-input-wrap" for="portal-password">
+                    <span class="admin-input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 9h-1V7a4 4 0 1 0-8 0v2H7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4Zm7 11H7v-7h10Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <input id="portal-password" type="password" placeholder="Password">
+                    <span class="admin-input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 5C6.8 5 2.73 8.11 1 12c.63 1.42 1.57 2.75 2.76 3.88l-1.47 1.47 1.41 1.41 16-16-1.41-1.41-2.26 2.26A11.8 11.8 0 0 0 12 5Zm0 14a11.7 11.7 0 0 0 11-7 11.83 11.83 0 0 0-4.36-4.88l-1.47 1.47A4.97 4.97 0 0 1 17 10a5 5 0 0 1-6.41 4.78l-1.85 1.85A11.84 11.84 0 0 0 12 19Zm-5-7a4.97 4.97 0 0 1 4.97-4.97L9.91 9.09A2.98 2.98 0 0 0 12 15c.28 0 .56-.04.82-.11l-2.73-2.73C10.04 12.44 10 12.72 10 13Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                </label>
+
+                <label class="admin-remember">
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </label>
+
+                <button type="submit" class="admin-signin-btn">Sign In</button>
+            </form>
+
+            <a href="../index.html#home" class="admin-back-link">
+                <span aria-hidden="true">&larr;</span>
+                <span>Return to Leaderboard</span>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
