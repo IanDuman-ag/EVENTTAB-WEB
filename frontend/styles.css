@@ -445,6 +445,18 @@ body.results-page {
         linear-gradient(180deg, #0a2b4d 0, #0a2b4d 16rem, #edf2f8 16rem, #f8fbff 100%);
 }
 
+body.teams-page {
+    background:
+        radial-gradient(circle at top center, rgba(95, 148, 217, 0.14), transparent 18%),
+        linear-gradient(180deg, #0a2b4d 0, #0a2b4d 13rem, #edf2f8 13rem, #f8fbff 100%);
+}
+
+body.schedule-page {
+    background:
+        radial-gradient(circle at top center, rgba(243, 178, 46, 0.12), transparent 16%),
+        linear-gradient(180deg, #0a2b4d 0, #0a2b4d 16rem, #edf2f8 16rem, #f8fbff 100%);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -913,6 +925,389 @@ img {
     padding-top: 4rem;
 }
 
+.teams-section {
+    padding: 3.8rem 0 5rem;
+    background:
+        radial-gradient(circle at top center, rgba(95, 148, 217, 0.12), transparent 22%),
+        linear-gradient(180deg, #edf2f8 0%, #f8fbff 100%);
+}
+
+.schedule-section {
+    padding: 3.8rem 0 5rem;
+    background:
+        radial-gradient(circle at top center, rgba(95, 148, 217, 0.12), transparent 22%),
+        linear-gradient(180deg, #064da3 0%, #f8fbff 100%);
+}
+
+.schedule-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.schedule-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: rgba(255, 211, 46, 0.16);
+    color: var(--gold-500);
+    font-size: 1.6rem;
+    box-shadow: 0 12px 24px rgba(8, 28, 49, 0.12);
+}
+
+.schedule-hero h1 {
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    color: var(--white);
+    text-shadow: 0 8px 18px rgba(9, 39, 69, 0.18);
+}
+
+.schedule-hero p {
+    margin: 0.55rem 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 700;
+}
+
+.schedule-shell {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.schedule-days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(16, 54, 93, 0.1);
+    box-shadow: var(--shadow-sm);
+}
+
+.schedule-day {
+    padding: 0.65rem 1.15rem;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.schedule-day.active {
+    background: var(--navy-950);
+    color: var(--gold-400);
+}
+
+.schedule-empty-state {
+    display: flex;
+    justify-content: center;
+    min-height: 260px;
+    padding-top: 1rem;
+}
+
+.schedule-empty-card {
+    max-width: 460px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.schedule-empty-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: rgba(16, 54, 93, 0.08);
+    color: var(--navy-900);
+    font-size: 1.4rem;
+}
+
+.schedule-empty-card h2 {
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    font-size: 1.25rem;
+    color: var(--navy-950);
+}
+
+.schedule-empty-card p {
+    margin: 0.7rem 0 0;
+    color: var(--text-soft);
+    line-height: 1.7;
+}
+
+.teams-heading {
+    margin-bottom: 2rem;
+}
+
+.teams-kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.32rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(16, 54, 93, 0.08);
+    color: var(--navy-900);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.teams-heading h1 {
+    margin: 0.85rem 0 0.45rem;
+    font-family: "Sora", sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--navy-950);
+}
+
+.teams-heading p {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.7;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.35rem;
+}
+
+.department-card {
+    overflow: hidden;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(16, 54, 93, 0.08);
+    box-shadow: var(--shadow-sm);
+}
+
+.department-cover {
+    position: relative;
+    height: 112px;
+    padding: 0.8rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.department-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(12, 31, 54, 0.18) 0%, rgba(12, 31, 54, 0.4) 100%);
+}
+
+.cover-justice {
+    background:
+        linear-gradient(130deg, rgba(0, 0, 0, 0.55), rgba(42, 24, 8, 0.38)),
+        radial-gradient(circle at right, rgba(255, 215, 128, 0.35), transparent 32%),
+        linear-gradient(120deg, #23140a, #5a3a1d);
+}
+
+.cover-nursing {
+    background:
+        linear-gradient(130deg, rgba(0, 0, 0, 0.34), rgba(12, 31, 54, 0.28)),
+        radial-gradient(circle at 18% 38%, rgba(38, 201, 94, 0.35), transparent 24%),
+        linear-gradient(135deg, #8f949a, #3d4752);
+}
+
+.cover-kinetics {
+    background:
+        linear-gradient(130deg, rgba(0, 0, 0, 0.14), rgba(12, 31, 54, 0.18)),
+        linear-gradient(45deg, rgba(255, 185, 0, 0.45), rgba(244, 72, 72, 0.45), rgba(95, 148, 217, 0.45)),
+        linear-gradient(120deg, #e28b17, #8d2db7);
+}
+
+.cover-business {
+    background:
+        linear-gradient(130deg, rgba(0, 0, 0, 0.14), rgba(12, 31, 54, 0.18)),
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2), transparent 18%),
+        linear-gradient(120deg, #7493a8, #becbd5);
+}
+
+.cover-tourism {
+    background:
+        linear-gradient(130deg, rgba(0, 0, 0, 0.18), rgba(12, 31, 54, 0.18)),
+        radial-gradient(circle at 24% 36%, rgba(245, 101, 101, 0.32), transparent 18%),
+        linear-gradient(120deg, #9aa5b1, #d1d9dd);
+}
+
+.cover-engineering {
+    background:
+        linear-gradient(130deg, rgba(0, 0, 0, 0.22), rgba(12, 31, 54, 0.22)),
+        radial-gradient(circle at 72% 26%, rgba(255, 196, 0, 0.2), transparent 16%),
+        linear-gradient(120deg, #161616, #3a3a3a);
+}
+
+.department-rank,
+.department-view {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--navy-950);
+    font-size: 0.88rem;
+    font-weight: 800;
+    box-shadow: 0 10px 18px rgba(8, 28, 49, 0.12);
+}
+
+.department-rank.rank-first {
+    color: #b36a00;
+}
+
+.department-rank.rank-second {
+    color: #23a352;
+}
+
+.department-rank.rank-third {
+    color: #7d7d7d;
+}
+
+.department-view {
+    float: right;
+    font-size: 0.92rem;
+}
+
+.department-body {
+    position: relative;
+    padding: 1.25rem 1rem 1rem;
+}
+
+.department-emblem {
+    width: 56px;
+    height: 56px;
+    margin-top: -2.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 50%;
+    background: var(--white);
+    border: 4px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 12px 24px rgba(13, 41, 73, 0.12);
+    overflow: hidden;
+}
+
+.department-emblem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.department-body h2 {
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    color: var(--navy-950);
+}
+
+.department-points {
+    margin: 0.45rem 0 1rem;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+}
+
+.department-points strong {
+    color: var(--navy-950);
+    font-family: "Sora", sans-serif;
+}
+
+.department-medals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0.85rem;
+    padding: 0.8rem 0 0.65rem;
+    border-top: 1px solid rgba(16, 54, 93, 0.08);
+    border-bottom: 1px solid rgba(16, 54, 93, 0.08);
+}
+
+.department-medals div {
+    text-align: center;
+}
+
+.department-medals div + div {
+    border-left: 1px solid rgba(16, 54, 93, 0.08);
+}
+
+.department-medals span {
+    display: block;
+    color: var(--text-soft);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.department-medals strong {
+    display: block;
+    margin-top: 0.25rem;
+    color: #cb7b06;
+    font-family: "Sora", sans-serif;
+    font-size: 1rem;
+}
+
+.department-cheer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(16, 54, 93, 0.1);
+    color: var(--navy-950);
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.department-cheer:hover {
+    background: #f7fafd;
+    color: var(--navy-950);
+}
+
+.department-cheers-total {
+    margin: 0.7rem 0 0;
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+}
+
+.department-cheers-total strong {
+    color: var(--navy-950);
+    font-family: "Sora", sans-serif;
+}
+
+.department-cheers-total.accent-green strong {
+    color: #22a458;
+}
+
+.department-cheers-total.accent-gold strong {
+    color: #d89000;
+}
+
+.department-cheers-total.accent-pink strong {
+    color: #ec5f98;
+}
+
+.department-cheers-total.accent-orange strong {
+    color: #ff7a00;
+}
+
 .results-hero {
     max-width: 760px;
     margin: 0 auto 2rem;
@@ -1326,6 +1721,26 @@ img {
 
     .results-section {
         padding: 1rem 0 4rem;
+    }
+
+    .teams-section {
+        padding: 2rem 0 4rem;
+    }
+
+    .schedule-section {
+        padding: 2rem 0 4rem;
+    }
+
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-days {
+        justify-content: stretch;
+    }
+
+    .schedule-day {
+        width: 100%;
     }
 
     .results-hero {
